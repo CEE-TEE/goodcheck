@@ -24,7 +24,7 @@ jobs:
         env:
           TESTOPT: "--verbose"
           COVERAGE: ${{ matrix.ruby == '3.0' }}
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         if: ${{ hashFiles('coverage/index.html') != '' }}
         with:
           name: coverage
